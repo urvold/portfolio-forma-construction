@@ -1,18 +1,12 @@
 # Статус публикации
 
-- Цель: `urvold/portfolio-forma-construction`, публичный репозиторий и бесплатный GitHub Pages.
-- Ожидаемый адрес: `https://urvold.github.io/portfolio-forma-construction/`.
-- Подтверждение пользователя получено.
-- Vite base, HashRouter, абсолютный OG image, canonical, workflow и исключение служебных файлов готовы.
+- Репозиторий создан владельцем: https://github.com/urvold/portfolio-forma-construction .
+- Исходный код и workflow загружены в main.
+- Ожидаемый адрес: https://urvold.github.io/portfolio-forma-construction/ .
+- Vite base, HashRouter, абсолютный OG image, canonical и исключение служебных файлов готовы.
 - Production build и браузерные тесты под базовым путём проходят.
-- Создание репозитория заблокировано правами интеграции: GitHub HTTP 403 Resource not accessible by integration; GraphQL createRepository также отклонён.
-- Удалённый репозиторий и публичный адрес не подтверждены. HTTPS-проверка невозможна до развёртывания.
+- Первоначальное включение Pages через API отклонено: GitHub HTTP 403 Resource not accessible by integration. Официальный configure-pages требует для включения отдельного токена с правами administration:write и pages:write; стандартного GITHUB_TOKEN недостаточно.
+- Владелец должен выбрать Settings → Pages → Source → GitHub Actions. После этого можно повторить workflow и проверить публичный HTTPS.
+- Публичный адрес пока не подтверждён.
 
-После создания пустого публичного репозитория и предоставления интеграции доступа:
-
-1. Отправить main в origin.
-2. Включить GitHub Pages с источником GitHub Actions (`build_type: workflow`).
-3. Дождаться успешного выполнения workflow Build and deploy FORMA to GitHub Pages.
-4. Проверить публичный HTTPS URL и повторить браузерный сценарий с FORMA_TEST_URL, указывающим на опубликованный сайт.
-
-Встроенный GITHUB_TOKEN workflow предоставляется GitHub автоматически; сторонние ключи и секреты не нужны.
+Workflow использует предоставляемый GitHub GITHUB_TOKEN. Пользовательские ключи и секреты в проект не добавляются. Другие репозитории не изменяются.
