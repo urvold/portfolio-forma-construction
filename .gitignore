@@ -1,0 +1,18 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+
+# Local environment, credentials and generated service files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+.openai/
+.codex/
+.agents/
+.aws/
+playwright-report/
+test-results/
