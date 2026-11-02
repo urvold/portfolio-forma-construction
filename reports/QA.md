@@ -44,3 +44,7 @@
 Добавлен workflow `.github/workflows/pages.yml`: Node 24, npm ci, тесты, production build, официальный Pages artifact/deploy, запуск при push в main. В workflow не нужны пользовательские секреты. Абсолютные OG image и canonical настроены под планируемый Pages URL. `.env`, ключи, локальная конфигурация среды, node_modules и dist исключены из Git.
 
 Создать удалённый репозиторий не удалось: GitHub вернул GraphQL `Resource not accessible by integration (createRepository)` и REST HTTP 403 `Resource not accessible by integration`. Репозиторий и Pages не созданы; публичный HTTPS ещё не проверен. Это ограничение прав подключённой интеграции GitHub, не ошибка сборки сайта. Для продолжения нужен пустой публичный репозиторий urvold/portfolio-forma-construction, доступный текущему подключению. Другие репозитории не изменялись.
+
+## Подтверждённая публикация
+
+После включения Pages владельцем workflow 41436624675 завершился успешно. Сайт https://urvold.github.io/portfolio-forma-construction/ отвечает HTTP 200 по HTTPS; API подтверждает https_enforced: true. Проверены 22 ресурса, включая все изображения и шрифты, CSS и JS. Полный Chromium-сценарий повторно выполнен на публичном URL: 140 сочетаний маршрута/ширины, функциональные сценарии и axe проходят, ошибок ресурсов и JS нет. Подробности в DEPLOYMENT.md, public-assets.json и browser.json. Локальные Lighthouse-оценки выше не выдаются за измерения публичного хостинга.

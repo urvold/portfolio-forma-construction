@@ -1,0 +1,138 @@
+{
+  "url": "https://urvold.github.io/portfolio-forma-construction/",
+  "https": true,
+  "assets": [
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/fonts/manrope-latin.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 24836
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/fonts/manrope-cyrillic.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 14500
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/forest-small.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 55826
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/stone.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 115362
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/nord-small.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 54220
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/forest.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 189322
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/barn-small.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 70868
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/hero-small.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 72624
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/barn.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 643752
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/classic-small.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 93934
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/interior-small.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 59388
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/stone-small.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 41944
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/detail.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 164122
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/nord.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 250302
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/classic.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 323618
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/interior.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 242712
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/detail-small.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 63194
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/images/hero.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 224362
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/assets/index-DCBeaHuZ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 305075
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/assets/index-BtuYViyg.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 21183
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/assets/manrope-cyrillic-Dvxsihut.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 14500
+    },
+    {
+      "url": "https://urvold.github.io/portfolio-forma-construction/assets/manrope-latin-DHIcAJRg.woff2",
+      "status": 200,
+      "contentType": "font/woff2",
+      "bytes": 24836
+    }
+  ]
+}

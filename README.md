@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-Готовый статический сайт находится в `dist/`. Подготовлена бесплатная публикация через GitHub Pages; workflow `.github/workflows/pages.yml` выполняет тесты, сборку и развёртывание при push в `main`. Пользовательские секреты не требуются.
+Готовый статический сайт находится в `dist/`. Сайт опубликован бесплатно через GitHub Pages; workflow `.github/workflows/pages.yml` выполняет тесты, сборку и развёртывание при push в `main`. Пользовательские секреты не требуются.
 
 ## Что реализовано
 
@@ -64,8 +64,10 @@ CHROME_PATH=/usr/bin/chromium npx lighthouse http://localhost:4173/portfolio-for
 
 ## GitHub Pages
 
-Целевой репозиторий: https://github.com/urvold/portfolio-forma-construction . Планируемый адрес сайта: https://urvold.github.io/portfolio-forma-construction/ . Репозиторий создан владельцем, исходники загружены. Для первоначального включения Pages владелец выбирает Settings → Pages → Source → GitHub Actions; у подключения нет прав на это действие (GitHub 403). После включения развёртывание выполняет workflow. `base: '/portfolio-forma-construction/'` и HashRouter позволяют открывать вложенные разделы на GitHub Pages без серверного rewrite: `/portfolio-forma-construction/#/projects/nord`. Не заменяйте HashRouter на BrowserRouter без настройки перенаправлений. `public/404.html` предназначен для неизвестных физических путей, React-страница 404 — для неизвестных hash-маршрутов.
+Репозиторий: https://github.com/urvold/portfolio-forma-construction . Сайт: https://urvold.github.io/portfolio-forma-construction/ . Pages включён владельцем; исходники загружены, workflow успешно выполнил сборку и публикацию. HTTPS включён. Повторный браузерный аудит опубликованного сайта прошёл. `base: '/portfolio-forma-construction/'` и HashRouter позволяют открывать вложенные разделы на GitHub Pages без серверного rewrite: `/portfolio-forma-construction/#/projects/nord`. Не заменяйте HashRouter на BrowserRouter без настройки перенаправлений. `public/404.html` предназначен для неизвестных физических путей, React-страница 404 — для неизвестных hash-маршрутов.
 
 Абсолютный `og:image` и canonical настроены на публичный адрес GitHub Pages. При смене домена обновите их в `index.html`. Hash-маршруты удобны для GitHub Pages, но ограничивают отдельную индексацию разделов и отдельные social preview: для коммерческого запуска с полноценным SEO страниц нужен prerender/SSG с обычными URL. Сайт не заявляет, что эти ограничения устранены.
 
 Production-проверка: `FORMA_TEST_URL=http://localhost:4173/portfolio-forma-construction/ npm run test:browser`. Тот же сценарий поддерживает публичный HTTPS URL через эту переменную.
+
+Проверка публичных ресурсов: `python tests/public-assets.py` (стандартная библиотека Python). Результаты: `reports/public-assets.json`, `reports/browser.json`, `reports/DEPLOYMENT.md`.

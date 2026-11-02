@@ -1,12 +1,14 @@
-# Статус публикации
+# FORMA опубликован
 
-- Репозиторий создан владельцем: https://github.com/urvold/portfolio-forma-construction .
-- Исходный код и workflow загружены в main.
-- Ожидаемый адрес: https://urvold.github.io/portfolio-forma-construction/ .
-- Vite base, HashRouter, абсолютный OG image, canonical и исключение служебных файлов готовы.
-- Production build и браузерные тесты под базовым путём проходят.
-- Первоначальное включение Pages через API отклонено: GitHub HTTP 403 Resource not accessible by integration. Официальный configure-pages требует для включения отдельного токена с правами administration:write и pages:write; стандартного GITHUB_TOKEN недостаточно.
-- Владелец должен выбрать Settings → Pages → Source → GitHub Actions. После этого можно повторить workflow и проверить публичный HTTPS.
-- Публичный адрес пока не подтверждён.
+- Сайт: https://urvold.github.io/portfolio-forma-construction/
+- Репозиторий: https://github.com/urvold/portfolio-forma-construction
+- Подтверждённое развёртывание: https://github.com/urvold/portfolio-forma-construction/actions/runs/41436624675 — success.
+- Владелец включил GitHub Pages с источником workflow; API подтверждает https_enforced: true.
+- Основная ветка: main. При каждом push workflow выполняет npm ci, npm test, npm run build и deploy-pages.
+- Vite base: /portfolio-forma-construction/. HashRouter сохраняет вложенные маршруты на GitHub Pages.
+- HTTPS-страница отвечает 200. Проверены 22 ресурса: все WebP, локальные и используемые сборкой WOFF2, CSS и JavaScript; коды 200, непустые ответы, корректные сигнатуры изображений и шрифтов.
+- Chromium проверил публичный сайт: 20 маршрутов × 7 ширин, фильтры и пустое состояние, конфигуратор и сброс, этажи и комнаты, SVG с клавиатуры, мобильное меню, сенсорное управление, демоформу. Переполнения, ошибки JavaScript и HTTP-ошибки ресурсов не обнаружены. Axe: ноль нарушений на пяти ключевых страницах.
+- Реальные iPhone/Safari не тестировались; сенсорная проверка выполнена Chromium.
+- Другие репозитории не изменялись. Секреты, ключи и служебные файлы окружения не добавлялись. Используется автоматический GITHUB_TOKEN.
 
-Workflow использует предоставляемый GitHub GITHUB_TOKEN. Пользовательские ключи и секреты в проект не добавляются. Другие репозитории не изменяются.
+Отчёты: public-assets.json и browser.json. Первоначальные ограничения прав GitHub были разрешены владельцем через создание репозитория и включение Pages.
