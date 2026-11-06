@@ -1,0 +1,10 @@
+import {chromium} from '@playwright/test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox'],headless:true});
+const page=await browser.newPage({viewport:{width:390,height:844}});const base='http://localhost:4173/portfolio-forma-construction/';
+await page.goto(base);await page.waitForTimeout(1500);const original=await page.locator('main').evaluate(e=>e.getBoundingClientRect().top+scrollY);await page.evaluate(()=>scrollTo({top:600,behavior:'instant'}));await page.waitForTimeout(350);assert.equal(await page.locator('.site-header').evaluate(e=>e.getBoundingClientRect().height),56);assert.equal(await page.locator('main').evaluate(e=>e.getBoundingClientRect().top+scrollY),original);await page.screenshot({path:'reports/final-refinement/compact-header-mobile.png'});
+await page.getByRole('button',{name:'Открыть меню'}).click();await page.waitForTimeout(300);await page.setViewportSize({width:1024,height:900});await page.waitForTimeout(100);assert.equal(await page.locator('#mobile-menu').evaluate(d=>d.open),false);assert.equal(await page.evaluate(()=>document.body.style.position),'');
+await page.setViewportSize({width:390,height:844});await page.goto(base+'#/configurator');
+for(let style=0;style<4;style++)for(let floor=0;floor<2;floor++){
+ await page.getByRole('button',{name:'Шаг 1: Архитектурный стиль'}).click();await page.locator('.config-options button').nth(style).click();await page.getByRole('button',{name:'Шаг 3: Этажность'}).click();await page.locator('.config-options button').nth(floor).click();await page.locator('.house-visual').screenshot({path:`reports/final-refinement/volume-${style}-${floor+1}.png`});
+}
+fs.writeFileSync('reports/final-refinement/motion.json',JSON.stringify({reducedMotion:false,compactHeight:56,flowStable:true,desktopResizeClosesAndUnlocksMenu:true,volumeScreenshots:8},null,2));await browser.close();console.log('Normal-motion header, resize/unlock and 8 volume previews passed');

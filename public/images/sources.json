@@ -1,0 +1,74 @@
+[
+  {
+    "id": "horizon",
+    "file": "hero",
+    "generationId": "exec-1abd72d9-9056-4f66-95bd-01951a7eaecc",
+    "method": "OpenAI Image Generation",
+    "kind": "AI architectural concept visualization",
+    "date": "2026-11-06",
+    "style": "Современный минимализм",
+    "area": 218,
+    "floors": 1,
+    "sha256": "382e2a2fde1ba699deec43de13ad133ad09e4983d228b78461f9c0197519a361"
+  },
+  {
+    "id": "nord",
+    "file": "nord",
+    "generationId": "exec-de3fc520-ec81-48fa-a7a9-caac81ce78a6",
+    "method": "OpenAI Image Generation",
+    "kind": "AI architectural concept visualization",
+    "date": "2026-11-06",
+    "style": "Скандинавский",
+    "area": 156,
+    "floors": 2,
+    "sha256": "bddfc4d90b79433cc26e53204f331abd0bb74514f2ade45e510694704de27aed"
+  },
+  {
+    "id": "field",
+    "file": "barn",
+    "generationId": "exec-b10f7407-ce28-4859-a784-e5661179d9f4",
+    "method": "OpenAI Image Generation",
+    "kind": "AI architectural concept visualization",
+    "date": "2026-11-06",
+    "style": "Барнхаус",
+    "area": 112,
+    "floors": 1,
+    "sha256": "7538f3670f2e354f3c33de306412dd19726222fc4e09b20c142ccd97d975642a"
+  },
+  {
+    "id": "balance",
+    "file": "classic",
+    "generationId": "exec-4c3259f5-261d-43d6-84c0-0b916947545e",
+    "method": "OpenAI Image Generation",
+    "kind": "AI architectural concept visualization",
+    "date": "2026-11-06",
+    "style": "Современная классика",
+    "area": 286,
+    "floors": 2,
+    "sha256": "ec35212b982a00d721a9f6c04f369443c7b65d9839914d6e4136412a65a61b4d"
+  },
+  {
+    "id": "grove",
+    "file": "forest",
+    "generationId": "exec-6b6037c5-f0a6-4572-a38a-b1445938514e",
+    "method": "OpenAI Image Generation",
+    "kind": "AI architectural concept visualization",
+    "date": "2026-11-06",
+    "style": "Современный минимализм",
+    "area": 178,
+    "floors": 1,
+    "sha256": "187972386a8bac50febb16650c19fecdd3ad9be652daf04b9b2aae632ab37fb3"
+  },
+  {
+    "id": "patio",
+    "file": "stone",
+    "generationId": "exec-dc5a50b3-c543-46e8-85af-795684bf0876",
+    "method": "OpenAI Image Generation",
+    "kind": "AI architectural concept visualization",
+    "date": "2026-11-06",
+    "style": "Современный минимализм",
+    "area": 242,
+    "floors": 2,
+    "sha256": "e1b1697e012f77ccb29fd670519ae31056bc9b16ef30c662ac8e4efc36d12f60"
+  }
+]

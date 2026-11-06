@@ -1,10 +1,11 @@
 """Validate HTTPS deployment and every image/font including built CSS font URLs."""
-import concurrent.futures, json, pathlib, re, urllib.request
+import concurrent.futures, json, os, pathlib, re, urllib.request
 from urllib.parse import urljoin
-base = 'https://urvold.github.io/portfolio-forma-construction/'
+base = os.environ.get('FORMA_TEST_URL','https://urvold.github.io/portfolio-forma-construction/')
 with urllib.request.urlopen(base, timeout=30) as response:
     html = response.read().decode()
-    assert response.status == 200 and response.url.startswith('https://')
+    assert response.status == 200
+    if base.startswith('https://'): assert response.url.startswith('https://')
 paths = [str(p.relative_to('public')) for p in pathlib.Path('public').rglob('*') if p.is_file() and p.suffix in ['.webp', '.woff2']]
 assets = re.findall(r'(?:src|href)="([^"]+\.(?:css|js))"', html)
 paths += assets
@@ -25,5 +26,7 @@ def check(path):
         return {'url':url,'status':response.status,'contentType':content_type,'bytes':len(data)}
 with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
     results = list(pool.map(check, paths))
-pathlib.Path('reports/public-assets.json').write_text(json.dumps({'url':base,'https':True,'assets':results},indent=2))
-print(f'HTTPS 200; {len(results)} resources passed; all image/font signatures valid')
+out = pathlib.Path(os.environ.get('FORMA_REPORT_DIR','reports'))
+out.mkdir(parents=True, exist_ok=True)
+(out/'public-assets.json').write_text(json.dumps({'url':base,'https':base.startswith('https://'),'assets':results},indent=2))
+print(f'HTTP 200; {len(results)} resources passed; all image/font signatures valid')
