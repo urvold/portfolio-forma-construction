@@ -1,0 +1,21 @@
+{
+  "widths": [
+    375,
+    430,
+    768,
+    1024,
+    1280,
+    1440,
+    1920
+  ],
+  "zooms": [
+    1,
+    1.25,
+    1.5,
+    2
+  ],
+  "method": "Equivalent CSS viewport reflow (width / zoom), not browser UI zoom",
+  "failures": [],
+  "errors": [],
+  "alignedCards": true
+}

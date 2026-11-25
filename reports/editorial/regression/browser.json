@@ -1,0 +1,137 @@
+{
+  "base": "http://localhost:4173/portfolio-forma-construction/",
+  "widths": [
+    320,
+    375,
+    390,
+    430,
+    768,
+    1024,
+    1440
+  ],
+  "routes": 20,
+  "errors": [],
+  "badResponses": [],
+  "brokenImages": [],
+  "overflows": [],
+  "headingOverflows": [],
+  "header": {
+    "initialHeight": 78,
+    "compactHeight": 56,
+    "flowStable": true,
+    "backgroundLocked": true,
+    "focusTrap": true,
+    "scrollRestored": true
+  },
+  "configurations": [
+    {
+      "selection": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected": "2,7 млн ₽ — 5,6 млн ₽"
+    },
+    {
+      "selection": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "expected": "6,5 млн ₽ — 13,2 млн ₽"
+    },
+    {
+      "selection": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "expected": "6,1 млн ₽ — 12,5 млн ₽"
+    },
+    {
+      "selection": [
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "expected": "10,8 млн ₽ — 20,3 млн ₽"
+    },
+    {
+      "selection": [
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "expected": "9 млн ₽ — 17 млн ₽"
+    },
+    {
+      "selection": [
+        2,
+        3,
+        1,
+        3,
+        0
+      ],
+      "expected": "10,6 млн ₽ — 18,8 млн ₽"
+    },
+    {
+      "selection": [
+        3,
+        3,
+        0,
+        3,
+        0
+      ],
+      "expected": "12,5 млн ₽ — 22,4 млн ₽"
+    },
+    {
+      "selection": [
+        3,
+        0,
+        1,
+        0,
+        1
+      ],
+      "expected": "4,6 млн ₽ — 9,3 млн ₽"
+    }
+  ],
+  "floorChecks": 9,
+  "roomChecks": 54,
+  "touchPassed": true,
+  "axe": [
+    {
+      "route": "/",
+      "violations": []
+    },
+    {
+      "route": "/projects",
+      "violations": []
+    },
+    {
+      "route": "/configurator",
+      "violations": []
+    },
+    {
+      "route": "/projects/nord",
+      "violations": []
+    },
+    {
+      "route": "/contacts",
+      "violations": []
+    },
+    {
+      "route": "/services/design",
+      "violations": []
+    }
+  ]
+}
